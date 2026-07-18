@@ -3,41 +3,38 @@ version: 2
 models:
   - name: fact_unit
     description: "Fact table for media unit performance."
+
     semantic_model:
       enabled: true
+
     agg_time_dimension: spot_date
+
     columns:
-      # Entities
+
       - name: unit_id
         entity:
-          type: primary
           name: unit
+          type: primary
+
       - name: plan_id
         entity:
-          type: foreign
           name: plan
-      - name: channel_id
-        entity:
           type: foreign
-          name: channel
-      - name: advertiser_id
-        entity:
-          type: foreign
-          name: advertiser
-     
-      # Dimensions
-      - name: spot_date      
+
+      - name: spot_date
         dimension:
-          type: time  
-        granularity: day        
+          type: time
+        granularity: day
 
     metrics:
       - name: units_count
         description: "Total count of units."
         agg: sum
+
       - name: pitched_imps
         description: "Total impressions pitched."
         agg: sum
+
       - name: unit_price
-        description: "Total Unit price"
+        description: "Total unit price."
         agg: sum
