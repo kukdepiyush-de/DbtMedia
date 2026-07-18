@@ -32,12 +32,12 @@ models:
         granularity: day        
 
     metrics:
-      - name: total_units
+      - name: units_count
         description: "Total count of units."
         agg: sum
-      - name: total_pitched_impressions
+      - name: pitched_imps
         description: "Total impressions pitched."
         agg: sum
-      - name: sum_unit_price
+      - name: unit_price
         description: "Total Unit price"
         agg: sum
