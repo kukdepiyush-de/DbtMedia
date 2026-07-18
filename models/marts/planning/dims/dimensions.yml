@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_plan
+    semantic_model:
+      enabled: true
+    columns:
+      - name: plan_id
+        entity:
+          type: primary
+          name: plan
+      - name: advertiser_id
+        entity:
+          type: foreign
+          name: advertiser
+      - name: plan_name
+        dimension:
+          type: categorical
+
+  - name: dim_advertiser
+    semantic_model:
+      enabled: true
+    columns:
+      - name: advertiser_id
+        entity:
+          type: primary
+          name: advertiser
+      - name: advertiser_name
+        dimension:
+          type: categorical
+
+  - name: dim_date
+    semantic_model:
+      enabled: true
+    columns:
+      - name: date_actual
+        entity:
+          type: primary
+          name: date
+        dimension:
+          type: time
+       
