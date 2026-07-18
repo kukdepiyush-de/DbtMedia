@@ -24,12 +24,12 @@ models:
         entity:
           type: foreign
           name: advertiser
-      
+     
       # Dimensions
-      - name: spot_date
+      - name: spot_date      
         dimension:
-          type: time
-          
+          type: time  
+        granularity: day        
 
     metrics:
       - name: total_units
