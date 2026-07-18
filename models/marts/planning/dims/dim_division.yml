@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_division
+    description: "Division dimension."
+
+    semantic_model:
+      enabled: true
+
+    columns:
+
+      # Primary Entity
+      - name: division_id
+        entity:
+          name: division
+          type: primary
+
+      # Business Dimension
+      - name: division_name
+        dimension:
+          type: categorical

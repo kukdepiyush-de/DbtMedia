@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_advertiser
+    description: "Advertiser dimension."
+
+    semantic_model:
+      enabled: true
+
+    columns:
+
+      # Primary Entity
+      - name: advertiser_id
+        entity:
+          name: advertiser
+          type: primary
+
+      # Foreign Entity
+      - name: brand_id
+        entity:
+          name: brand
+          type: foreign
+
+      # Business Dimension
+      - name: advertiser_name
+        dimension:
+          type: categorical
