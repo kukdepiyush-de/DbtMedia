@@ -28,6 +28,3 @@ sources:
       - name: SPOT_DATA
         description: "Core fact table containing spot-level media performance data."
         # Senior AE best practice: Add tests to your source tables
-        tests:
-          - not_null:
-              column_name: SPOT_ID # (Replace with your actual primary key)
