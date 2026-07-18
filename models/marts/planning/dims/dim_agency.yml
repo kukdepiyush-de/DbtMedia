@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_agency
+    description: "Agency dimension."
+
+    semantic_model:
+      enabled: true
+
+    columns:
+
+      # Primary Entity
+      - name: agency_id
+        entity:
+          name: agency
+          type: primary
+
+      # Business Dimension
+      - name: agency_name
+        dimension:
+          type: categorical

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_demo
+    description: "Demo dimension."
+
+    semantic_model:
+      enabled: true
+
+    columns:
+
+      # Primary Entity
+      - name: demo_id
+        entity:
+          name: demo
+          type: primary
+
+      # Business Dimension
+      - name: demo_name
+        dimension:
+          type: categorical

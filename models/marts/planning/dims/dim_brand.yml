@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_brand
+    description: "Brand dimension."
+
+    semantic_model:
+      enabled: true
+
+    columns:
+
+      - name: brand_id
+        entity:
+          name: brand
+          type: primary
+
+      - name: brand_name
+        dimension:
+          type: categorical
