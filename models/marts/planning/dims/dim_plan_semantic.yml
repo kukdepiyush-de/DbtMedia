@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_plan
+    semantic_model:
+      enabled: true
+    columns:
+      - name: plan_id
+        entity:
+          type: primary
+          name: plan
+      - name: channel_id
+        entity:
+          type: foreign
+          name: channel
+      - name: advertiser_id
+        entity:
+          type: foreign
+          name: advertiser
+      - name: plan_name
+        dimension:
+          type: categorical
