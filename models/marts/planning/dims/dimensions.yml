@@ -29,14 +29,4 @@ models:
         dimension:
           type: categorical
 
-  - name: dim_date
-    semantic_model:
-      enabled: true
-    columns:
-      - name: date_actual
-        entity:
-          type: primary
-          name: date
-        dimension:
-          type: time
        
