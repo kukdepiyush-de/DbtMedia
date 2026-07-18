@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_linear
+    description: "Raw data ingested from LINEAR_MEDIA database."
+    database: LINEAR_MEDIA
+    schema: RAW_LINEAR
+    # Add a freshness check if you have a timestamp column (e.g., loaded_at)
+    # freshness:
+    #   warn_after: {count: 24, period: hour}
+    tables:
+      - name: ADVERTISER
+        description: "Dimension table for advertisers."
+      - name: AGENCY
+        description: "Dimension table for agencies."
+      - name: BRAND
+        description: "Dimension table for brands."
+      - name: CHANNEL
+        description: "Dimension table for channels."
+      - name: DATE
+        description: "Date dimension table."
+      - name: DEMO
+        description: "Demographic data."
+      - name: DIVISION
+        description: "Division lookup table."
+      - name: PLAN
+        description: "Planning or booking data."
+      - name: SPOT_DATA
+        description: "Core fact table containing spot-level media performance data."
+        # Senior AE best practice: Add tests to your source tables
+        tests:
+          - not_null:
+              column_name: SPOT_ID # (Replace with your actual primary key)
