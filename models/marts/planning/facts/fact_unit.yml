@@ -16,8 +16,21 @@ models:
         entity:
           type: foreign
           name: plan
+      - name: channel_id
+        entity:
+          type: foreign
+          name: channel
+      - name: advertiser_id
+        entity:
+          type: foreign
+          name: advertiser
       
-      # Metrics
+      # Dimensions
+      - name: spot_date
+        dimension:
+          type: time
+          
+
     metrics:
       - name: total_units
         description: "Total count of units."
