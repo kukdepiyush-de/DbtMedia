@@ -1,0 +1,23 @@
+version: 2
+
+exposures:
+  - name: google_sheets_semantic_layer
+    label: Google Sheets Semantic Layer Reporting
+    type: application
+    maturity: medium
+
+    description: >
+      Google Sheets integration powered by dbt Semantic Layer.
+
+    owner:
+      name: Piyush Kukde
+
+    depends_on:
+      - ref('fact_unit')
+      - ref('dim_plan')
+      - ref('dim_advertiser')
+      - ref('dim_agency')
+      - ref('dim_channel')
+      - ref('dim_demo')
+      - ref('dim_division')
+      - ref('dim_brand')
