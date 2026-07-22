@@ -38,3 +38,15 @@ models:
       - name: unit_price
         description: "Total unit price."
         agg: sum
+
+metrics: ## advanced metrics
+
+#Ratio type metric
+  - name: "cpm"
+    description: "unit price by impressions"
+    label: "cpm"    
+    type: derived
+    expr: (unit_price/pitched_imps) * 1000
+    input_metrics:
+     - name : unit_price
+     - name : pitched_imps
